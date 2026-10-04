@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kitti-tracking2det"
+version = "0.1.0"
+description = "Download KITTI Tracking and convert it to per-sequence KITTI Detection layout"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Hasan Shahriar" }]
+keywords = ["kitti", "tracking", "detection", "autonomous-driving", "dataset"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.urls]
+Homepage = "https://github.com/shahriar0651/kitti-tracking2det"
+Issues = "https://github.com/shahriar0651/kitti-tracking2det/issues"
+
+[project.scripts]
+kitti-tracking2det = "kitti_tracking2det.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+kitti_tracking2det = ["py.typed"]
