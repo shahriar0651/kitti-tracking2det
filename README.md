@@ -11,7 +11,9 @@ Zero runtime dependencies (Python 3.8+ stdlib only).
 - Another ~100–130 GB if you keep a full converted detection copy (files are copied, not symlinked)
 - `curl` or `wget` recommended for resumable downloads (stdlib `urllib` is used as fallback)
 
-## Install
+## Install (git clone)
+
+Not published to PyPI — clone and install editable so you can point downloads at your own data directories:
 
 ```bash
 git clone https://github.com/shahriar0651/kitti-tracking2det.git
@@ -22,6 +24,8 @@ pip install -e .
 ```
 
 ## Run locally (download + create detection datasets)
+
+You must choose where data lives via `--tracking-root` and `--detection-root` (examples below use `~/datasets/kitti/...`).
 
 One-shot (recommended):
 
